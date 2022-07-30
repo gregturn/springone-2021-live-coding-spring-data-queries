@@ -17,6 +17,7 @@ public class Manager {
     @Id @GeneratedValue private Long id;
     private String name;
     @OneToMany(mappedBy = "manager")
+    @JsonManagedReference
     private List<Employee> employees = new ArrayList<>();
 
     protected Manager() {
