@@ -17,6 +17,7 @@ public class Employee {
     private String name;
     private String role;
     @ManyToOne
+    @JsonBackReference
     private Manager manager;
 
     @CreatedDate private Date createDate;
